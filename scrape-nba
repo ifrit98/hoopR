@@ -1,0 +1,6 @@
+#!/bin/bash
+
+pip install ipython bs4 --user
+x-terminal-emulator -e ipython -i ~/git/hoopR/scrape.py
+
+
