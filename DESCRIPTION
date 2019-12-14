@@ -18,3 +18,4 @@ Imports:
   purrr,
   docopt,
   tidyverse
+RoxygenNote: 7.0.2
