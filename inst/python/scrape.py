@@ -1,9 +1,13 @@
+
+import sys
+assert sys.version_info[0] == 2
+
 from urllib import urlopen
 from bs4 import BeautifulSoup
 import pandas as pd
-import sys
 
-year = raw_input("Enter desired year to scrape data:\n ")
+
+year = 2019 # raw_input("Enter desired year to scrape data:\n ")
 
 try:
     year = int(year)
@@ -60,5 +64,7 @@ def dump_to_csv(df, file = 'nba-data.csv'):
 
 file = "nba-{}-data.csv".format(year)  
 dump_to_csv(stats, file)
+
+print("csv dumped to {}".format(file))
 
 

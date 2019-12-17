@@ -22,8 +22,9 @@ players <- function(df) {
 }
 
 #' @importFrom magrittr %>%
-player <- function(df, name, team = "TOT") {
-  df %>% filter(Player == name, Tm == team)
+#' @importFrom dyplr filter
+player <- function(df, name) {
+  df %>% dplyr::filter(Player == name)
 }
 
 #' Remove column(s) of dataframe
@@ -53,3 +54,5 @@ player_stat <- function(df, name, stat) {
   plr <- player(df, name)
   dplyr::select(plr, str)
 }
+
+
